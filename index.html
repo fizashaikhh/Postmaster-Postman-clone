@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Welcome to Postmaster</title>
+  <link rel="stylesheet" href="prism.css">
+  <style>
+    #reponsepre{
+      max-height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <img src="postman.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <a class="navbar-brand mx-3 my-1"><b>Postmaster</b></a>
+
+  </nav>
+  <div class="container">
+    <h1 class="my-3">Welcome to Postmaster</h1>
+  </div>
+  <div class="container">
+    <!-- URL Box -->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">URL</label>
+      <div class="col-sm-10">
+        <input type="url" class="form-control" id="url">
+      </div>
+    </div>
+    <!-- Request Type Box -->
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Request Type</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="requesttype" id="get" value="GET" checked>
+            <label class="form-check-label">
+              GET
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="requesttype" id="post" value="POST">
+            <label class="form-check-label">
+              POST
+            </label>
+          </div>
+
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Content Type</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="contenttype" id="json" value="JSON" checked>
+            <label class="form-check-label">
+              JSON
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="contenttype" id="custom" value="Custom">
+            <label class="form-check-label">
+              Custom Parameters
+            </label>
+          </div>
+
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Custom Parameters Box -->
+
+    <div class="form row" id="parametersbox">
+      <div class="col form-group row">
+        <label class="col-sm-2 col-form-label">Parameter 1</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="parameterKey1" placeholder="Enter parameter 1 key">
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="parameterValue1" placeholder="Enter parameter 1 value">
+        </div>
+        <button id="addparam1" class="btn btn-primary">+</button>
+
+      </div>
+      
+
+    </div>
+    <!-- JSON RequestBox -->
+
+    <div class="form row my-3" id="JSONtext">
+      <label class="col-sm-2 col-form-label">Enter JSON here</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" id="JSONtextbox" rows="3"></textarea>
+      </div>
+    </div>
+    <!-- Submit button that will trigger fetch API -->
+
+    <div class="form-group row ">
+      <button class="btn btn-primary form-group mx-3" id="submit">Submit</button>
+    </div>
+    <!-- Response Box  -->
+    <div class="form-group row my-5" id="response">
+      <label class="col-sm-2 col-form-label">Response</label>
+      <div class="col-sm-10">
+        <!-- <textarea class="form-control" id="responsebox" rows="3"
+          placeholder="Your response will appear here"></textarea> -->
+          <pre id="reponsepre" class="language-javascript"><code id="responseprism" class="language-javascript">
+          Your response will appear here
+          </code></pre>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <script src="prism.js"></script>
+</body>
+
+</html>
